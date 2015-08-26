@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Flaticon";
+    src: url("font/flaticon.eot");
+    src: url("font/flaticon.eot#iefix") format("embedded-opentype"),
+    url("font/flaticon.woff") format("woff"),
+    url("font/flaticon.ttf") format("truetype"),
+    url("font/flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-style: normal;
+}.flaticon-airplane49:before {
+     content: "\e000";
+ }
+.flaticon-airplane71:before {
+    content: "\e001";
+}
+.flaticon-bag30:before {
+    content: "\e002";
+}
+.flaticon-baggage20:before {
+    content: "\e003";
+}
+.flaticon-dog73:before {
+    content: "\e004";
+}
+.flaticon-dollar103:before {
+    content: "\e005";
+}
+.flaticon-flight1:before {
+    content: "\e006";
+}
+.flaticon-heart56:before {
+    content: "\e007";
+}
+.flaticon-luggage26:before {
+    content: "\e008";
+}
+.flaticon-money191:before {
+    content: "\e009";
+}
+.flaticon-person279:before {
+    content: "\e00a";
+}
+.flaticon-suitcases6:before {
+    content: "\e00b";
+}
+.flaticon-travel25:before {
+    content: "\e00c";
+}
+
+.flaticon-rounded {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 28px;
+}
+
+.flaticon-rounded:before{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.flaticon-rounded-pink{
+    background-color: #ff2d55;
+    color: #fff;
+}
+.flaticon-rounded-green{
+    background-color: #4cd964;
+    color: #fff;
+}
+
+.flaticon-rounded-lightblue{
+    background-color: #5ac8fa;
+    color: #fff;
+}
+
+.flaticon-rounded-gray{
+    background-color: #8e8e93;
+    color: #fff;
+    font-size: 26px;
+}
+
+.flaticon-rounded-orange{
+    background-color: #ff6600;
+    color: #fff;
+}
+
+
+.tutorialicon {
+    font-size: 210px;
+    line-height: 170px;
+}
+
+.tutorial-close-btn {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #0da6ec;
+}
+
+.welcomescreen-container .welcomescreen-text a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.tutorial-close-btn {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #0da6ec !important;
+    text-decoration: none !important;
+}
+
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-logo{
+    display: inline-block;
+    width: 85%;
+}
+
+.center{
+    text-align: center;
+}
+
+.navbar {
+    background: #ff6600;
+    border-bottom: none;
+    color: #fff;
+}
+
+.list-block ul:before,
+.list-block ul:after,
+.content-block-inner:after,
+.content-block-inner:before{
+    background-color: rgba(200,199,204,.45)
+}
+
+.content-block-inner-selector{
+    text-align: center;
+    font-weight: bold;
+    color: #ff3b30;
+}
+.content-block-inner-selector:before{
+    background-color: rgba(200,199,204,0)
+}
+
+.page{
+    background-color: #fff;
+}
+
+.badge{
+    font-size: 15px;
+}
+
+i.icon.icon-form-creditcard {
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/i-form-creditcard-ios.svg");
+}
+
+i.icon.icon-form-creditcard-num {
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/i-form-creditcard-num-ios.svg");
+}
+
+i.icon.icon-form-creditcard-cvv {
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/i-form-creditcard-cvv-ios.svg");
+}

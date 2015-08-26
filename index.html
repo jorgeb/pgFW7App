@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="./css/framework7.ios.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="./css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/welcomescreen.css">
+  </head>
+  <body class="theme-orange">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Bienvenido a Viaggio</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+
+              <div class="content-block-inner center">
+                <img src="./img/app/logo-2.png" class="img-responsive img-logo">
+              </div>
+
+              <div class="content-block-inner content-block-inner-selector">
+                Selecciona un producto:
+              </div>
+
+
+              <div class="list-block media-list">
+                  <ul>
+                    <li>
+                      <a href="./view/step-05.html" class="item-link item-content">
+                        <div class="item-media"><i class="flaticon-suitcases6 flaticon-rounded flaticon-rounded-pink"></i></div>
+                        <div class="item-inner">
+                           <div class="item-title-row">
+                            <div class="item-title">Viajero</div>
+                          </div>
+                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./view/step-01.html" class="item-link item-content">
+                        <div class="item-media"><i class="flaticon-heart56 flaticon-rounded flaticon-rounded-green"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Equipajes Extraviados</div>
+                          </div>
+                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media"><i class="flaticon-flight1 flaticon-rounded flaticon-rounded-lightblue"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Cancelación de Vuelo</div>
+                          </div>
+                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media"><i class="flaticon-airplane71 flaticon-rounded flaticon-rounded-gray"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Demora de Vuelo</div>
+                          </div>
+                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Cordova Library-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="./js/lib/framework7.min.js"></script>
+
+    <script type="text/javascript" src="./js/lib/welcomescreen.js"></script>
+
+    <!-- Path to pages -->
+    <script type="text/javascript" src="./js/app/pages/index-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/step-1-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/step-2-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/step-3-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/step-4-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/step-5-page-controller.js"></script>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="./js/app/init.js"></script>
+
+  </body>
+</html>

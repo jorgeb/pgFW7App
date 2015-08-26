@@ -1,0 +1,65 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="center sliding">Segundo Paso</div>
+    </div>
+</div>
+
+
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="step02" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title">Seleccione una ruta</div>
+
+            <div class="list-block">
+            <ul>
+            <!-- Switch (Checkbox) -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Viaje Redondo</div>
+                            <div class="item-input">
+                                <label class="label-switch">
+                                    <input type="checkbox" id="roundtrip">
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="content-block-title">Fecha:</div>
+            <div class="content-block">
+                <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
+                    <div style="margin:0" class="list-block">
+                        <ul style="border-top:none">
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Date Time" readonly id="picker-date-roundtrip">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="picker-date-container-roundtrip"></div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-66"></div>
+                    <div class="col-33">
+                        <button id="to-step-3" class="button button-big button-fill color-green">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

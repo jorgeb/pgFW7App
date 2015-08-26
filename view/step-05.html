@@ -1,0 +1,88 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="center sliding">Quinto Paso</div>
+    </div>
+</div>
+
+
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="step05" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title">Forma de Pago</div>
+
+            <div class="list-block inset">
+                <form id="frm-credit-card" name="frm-credit-card">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-creditcard"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Tarjeta</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="" readonly id="card[name]" name="card[name]">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-creditcard-num"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Número</div>
+                                    <div class="item-input">
+                                        <input type="text" name="card[number]"  placeholder="4111 1111 1111 1111" maxlength="16" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Expiración</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="" readonly id="card[exp]" name="card[exp]">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-creditcard-cvv"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">CVV</div>
+                                    <div class="item-input">
+                                        <input type="text" name="card[cvv]"  placeholder="123" maxlength="3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-name"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">Nombre</div>
+                                    <div class="item-input">
+                                        <input type="text" name="card[name]"  placeholder="Carlos G." />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-66"></div>
+                    <div class="col-33">
+                        <button id="to-step-4" class="button button-big button-fill color-green">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
