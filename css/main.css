@@ -180,3 +180,17 @@ i.icon.icon-form-creditcard-cvv {
     height: 29px;
     background-image: url("../img/i-form-creditcard-cvv-ios.svg");
 }
+
+.app-name{
+    font-family: Verdana;
+    font-size: 40px;
+    color: #ff6600;
+    display: inline-block;
+}
+.app-name:last-of-type{
+    padding-left: 10px;
+}
+.app-name:first-letter{
+    font-weight: bold;
+    color: #ff3b30;
+}
