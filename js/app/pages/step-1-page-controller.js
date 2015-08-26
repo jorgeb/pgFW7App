@@ -10,8 +10,6 @@ myapp.pages.Step1PageController = function (myapp, $$) {
     (function () {
         var pickerInline = myapp.picker({
             input: '#picker-date',
-            container: '#picker-date-container',
-            toolbar: false,
             rotateEffect: true,
 
             value: [today.getMonth(), today.getDate(), today.getFullYear(), today.getHours(), (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes())],
@@ -22,11 +20,11 @@ myapp.pages.Step1PageController = function (myapp, $$) {
                     picker.cols[1].setValue(daysInMonth);
                 }
 
-                selectedDate = new Date(values[2], values[0], values[1], values[3], values[4],0, 0)
+                selectedDate = new Date(values[2], values[0], values[1], 0, 0,0, 0)
             },
 
             formatValue: function (p, values, displayValues) {
-                return displayValues[0] + ' ' + values[1] + ', ' + values[2] + ' ' + values[3] + ':' + values[4];
+                return displayValues[0] + ' ' + values[1] + ', ' + values[2];
             },
 
             cols: [
@@ -45,32 +43,6 @@ myapp.pages.Step1PageController = function (myapp, $$) {
                     values: (function () {
                         var arr = [];
                         for (var i = 1950; i <= 2030; i++) { arr.push(i); }
-                        return arr;
-                    })(),
-                },
-                // Space divider
-                {
-                    divider: true,
-                    content: '  '
-                },
-                // Hours
-                {
-                    values: (function () {
-                        var arr = [];
-                        for (var i = 0; i <= 23; i++) { arr.push(i); }
-                        return arr;
-                    })(),
-                },
-                // Divider
-                {
-                    divider: true,
-                    content: ':'
-                },
-                // Minutes
-                {
-                    values: (function () {
-                        var arr = [];
-                        for (var i = 0; i <= 59; i++) { arr.push(i < 10 ? '0' + i : i); }
                         return arr;
                     })(),
                 }
