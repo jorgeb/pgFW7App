@@ -9,8 +9,31 @@ myapp.pages.Step1PageController = function (myapp, $$) {
     'use strict';
     // Init method
     (function () {
-        var pickerInline = myapp.picker({
-            input: '#picker-date',
+        myapp.picker({
+            input: '#path[hour]',
+            rotateEffect: true,
+            formatValue: function (p, values, displayValues) {
+                return values[0] + ':' + values[1] + ' ' + values[2];
+            },
+            cols: [
+                {
+                    values: ('00 01 02 03 04 05 06 07 08 09 10 11 12').split(' ')
+                },
+                {
+                    values: (function () {
+                        var arr = [];
+                        for (var i = 0; i <= 59; i++) { arr.push(String('00'+i).slice(-2)); }
+                        return arr;
+                    })()
+                },
+                {
+                    values: ['AM','PM']
+                },
+            ]
+        });
+
+        myapp.picker({
+            input: '#path[day]',
             rotateEffect: true,
 
             value: [today.getMonth(), today.getDate(), today.getFullYear()],
@@ -45,7 +68,7 @@ myapp.pages.Step1PageController = function (myapp, $$) {
                         var arr = [];
                         for (var i = 1950; i <= 2030; i++) { arr.push(i); }
                         return arr;
-                    })(),
+                    })()
                 }
             ]
         });

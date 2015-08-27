@@ -14,7 +14,7 @@ myapp.pages.Step6PageController = function (myapp, $$) {
         }
 
 
-        $$('#to-step-7').click(function () {
+        $$('#lnk-end').click(function () {
             var ver = errors();
             var clossed = 0;
             var $$this = $$(this);

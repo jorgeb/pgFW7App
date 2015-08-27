@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Ruta</span></a></div>
         <div class="center sliding">Segundo Paso</div>
     </div>
 </div>
@@ -11,52 +11,63 @@
     <div data-page="step02" class="page">
         <!-- Scrollable page content-->
         <div class="page-content">
-            <div class="content-block-title">Seleccione una ruta</div>
+            <div class="content-block-title">Vuelo</div>
 
-            <div class="list-block">
-            <ul>
-            <!-- Switch (Checkbox) -->
-                <li>
-                    <div class="item-content">
-                        <div class="item-inner">
-                            <div class="item-title label" style="width:auto">Viaje Redondo</div>
-                            <div class="item-input">
-                                <label class="label-switch">
-                                    <input type="checkbox" id="roundtrip">
-                                    <div class="checkbox"></div>
-                                </label>
+            <div style="margin:0" class="list-block media-list">
+                <ul style="border-top:none">
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Hora</div>
+                                </div>
+                                <input type="text" placeholder="00:00 AM" name="fligth[hour]" id="fligth[hour]">
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="content-block-title">Fecha:</div>
-            <div class="content-block">
-                <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
-                    <div style="margin:0" class="list-block">
-                        <ul style="border-top:none">
-                            <li>
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div class="item-input">
-                                            <input type="text" placeholder="Mes Dia, Año" readonly id="picker-date-roundtrip">
-                                        </div>
-                                    </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Fecha</div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                                <input type="text" placeholder="Mes Dia, Año" name="fligth[day]" id="fligth[day]">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="content-block-title">Regreso</div>
+
+            <div style="margin:0" class="list-block media-list">
+                <ul style="border-top:none">
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Hora</div>
+                                </div>
+                                <input type="text" placeholder="00:00 AM" name="return[hour]" id="return[hour]">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Fecha</div>
+                                </div>
+                                <input type="text" placeholder="Mes Dia, Año" name="return[day]" id="return[day]">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div class="content-block">
-                <div class="row">
-                    <div class="col-66"></div>
-                    <div class="col-33">
-                        <button id="to-step-3" class="button button-big button-fill color-green">Siguiente</button>
-                    </div>
-                </div>
+                <p><a id="to-step-3" href="#" class="button button-big button-round color-green">Detalle del Servicio</a></p>
             </div>
 
         </div>
