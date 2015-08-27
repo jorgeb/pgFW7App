@@ -8,65 +8,73 @@
 
 <div class="pages">
     <!-- Page, data-page contains page name-->
-    <div data-page="step05" class="page">
+    <div data-page="step06" class="page">
         <!-- Scrollable page content-->
         <div class="page-content">
-            <div class="content-block-title">Forma de Pago</div>
+            <div class="content-block-title">Datos de Facturación</div>
 
             <div class="list-block inset">
-                <form id="frm-credit-card" name="frm-credit-card">
+                <form id="frm-invoice" name="frm-invoice">
                     <ul>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Tarjeta</div>
                                     <div class="item-input">
-                                        <input type="text" placeholder="" readonly id="card[name]" name="card[name]">
+                                        <input type="text" placeholder="Nombre/Razón Social" name="invoice[name]" id="invoice[name]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard-num"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Número</div>
                                     <div class="item-input">
-                                        <input type="text" name="card[number]"  placeholder="4111 1111 1111 1111" maxlength="16" />
+                                        <input type="text" placeholder="RFC" name="invoice[rfc]" id="invoice[rfc]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-calendar"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Expiración</div>
                                     <div class="item-input">
-                                        <input type="text" placeholder="" readonly id="card[exp]" name="card[exp]">
+                                        <input type="text" placeholder="Calle y Número" name="invoice[address]" id="invoice[address]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard-cvv"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">CVV</div>
                                     <div class="item-input">
-                                        <input type="text" name="card[cvv]"  placeholder="123" maxlength="3" />
+                                        <input type="text" placeholder="Colonia" name="invoice[colonia]" id="invoice[colonia]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-name"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Nombre</div>
                                     <div class="item-input">
-                                        <input type="text" name="card[name]"  placeholder="Carlos G." />
+                                        <input type="text" placeholder="Ciudad" name="invoice[city]" id="invoice[city]">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" placeholder="Delegación/Municipio" name="invoice[muni]" id="invoice[muni]">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" placeholder="Código Postal" name="invoice[zip]" id="invoice[zip]">
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +87,7 @@
                 <div class="row">
                     <div class="col-66"></div>
                     <div class="col-33">
-                        <button id="to-step-4" class="button button-big button-fill color-green">Siguiente</button>
+                        <button id="to-step-7" class="button button-big button-fill color-green">Siguiente</button>
                     </div>
                 </div>
             </div>

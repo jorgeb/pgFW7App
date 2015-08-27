@@ -38,5 +38,37 @@ myapp.pages.Step5PageController = function (myapp, $$) {
             ]
         });
 
+        var errors = function(){
+            var ret = [];
+
+            return ret;
+        }
+
+
+        $$('#to-step-6').click(function () {
+            var ver = errors();
+            var clossed = 0;
+            var $$this = $$(this);
+
+            if (ver.length > 0){
+                ver.forEach(function(e){
+                    myapp.addNotification({
+                        title: 'Error',
+                        message: e,
+                        onClose: function () {
+                            clossed++;
+
+                            if(clossed >= ver.length)
+                                $$this.removeAttr('disabled');
+                        }
+                    });
+                });
+
+                $$this.attr('disabled','disabled');
+            }
+            else
+                myapp.getCurrentView().router.loadPage('./view/step-06.html');
+        });
+
     }());
 };

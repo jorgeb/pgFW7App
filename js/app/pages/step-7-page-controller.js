@@ -1,16 +1,37 @@
 var myapp = myapp || {};
 myapp.pages = myapp.pages || {};
 
-var d = new Date();
-var today = new Date(d.getFullYear(),d.getMonth(),d.getDate());
-var selectedDate = today;
 
-myapp.pages.Step1PageController = function (myapp, $$) {
+myapp.pages.Step7PageController = function (myapp, $$) {
     'use strict';
     // Init method
     (function () {
-        var pickerInline = myapp.picker({
-            input: '#picker-date',
+
+        myapp.picker({
+            input: '#policy[hour]',
+            rotateEffect: true,
+            formatValue: function (p, values, displayValues) {
+                return values[0] + ':' + values[1] + ' ' + values[2];
+            },
+            cols: [
+                {
+                    values: ('00 01 02 03 04 05 06 07 08 09 10 11 12').split(' ')
+                },
+                {
+                    values: (function () {
+                        var arr = [];
+                        for (var i = 0; i <= 59; i++) { arr.push(String('00'+i).slice(-2)); }
+                        return arr;
+                    })(),
+                },
+                {
+                    values: ['AM','PM']
+                },
+            ]
+        });
+
+        myapp.picker({
+            input: '#policy[day]',
             rotateEffect: true,
 
             value: [today.getMonth(), today.getDate(), today.getFullYear()],
@@ -50,21 +71,15 @@ myapp.pages.Step1PageController = function (myapp, $$) {
             ]
         });
 
+
         var errors = function(){
-            console.log(selectedDate)
-            console.log(today)
-
             var ret = [];
-             if($$('#sel-from').val() == $$('#sel-to').val())
-                ret.push('Por favor ingrese un destino distinto al de origen.')
-
-            if (selectedDate < today)
-                ret.push('Por favor indrese una fecha a futuro.')
 
             return ret;
         }
 
-        $$('#to-step-2').click(function () {
+
+        $$('#to-step-8').click(function () {
             var ver = errors();
             var clossed = 0;
             var $$this = $$(this);
@@ -86,9 +101,8 @@ myapp.pages.Step1PageController = function (myapp, $$) {
                 $$this.attr('disabled','disabled');
             }
             else
-                myapp.getCurrentView().router.loadPage('./view/step-02.html');
+                myapp.getCurrentView().router.loadPage('./view/step-08.html');
         });
 
     }());
-
 };

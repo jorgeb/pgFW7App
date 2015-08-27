@@ -8,66 +8,68 @@
 
 <div class="pages">
     <!-- Page, data-page contains page name-->
-    <div data-page="step05" class="page">
+    <div data-page="step07" class="page">
         <!-- Scrollable page content-->
         <div class="page-content">
-            <div class="content-block-title">Forma de Pago</div>
+            <div class="content-block-title">Póliza</div>
 
-            <div class="list-block inset">
-                <form id="frm-credit-card" name="frm-credit-card">
+            <div class="list-block media-list inset">
+                <form id="frm-policy" name="frm-policy">
                     <ul>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Tarjeta</div>
                                     <div class="item-input">
-                                        <input type="text" placeholder="" readonly id="card[name]" name="card[name]">
+                                        <input type="text" placeholder="Nombre" name="policy[name]" id="policy[name]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard-num"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Número</div>
                                     <div class="item-input">
-                                        <input type="text" name="card[number]"  placeholder="4111 1111 1111 1111" maxlength="16" />
+                                        <input type="text" placeholder="Número de Vuelo" name="policy[flight]" id="policy[flight]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-calendar"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Expiración</div>
+                                    <div class="item-title-row">
+                                        <div class="item-title">Ruta</div>
+                                    </div>
+                                    <div class="item-text">Lorem ipsum dolor ==>  sit amet</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
                                     <div class="item-input">
-                                        <input type="text" placeholder="" readonly id="card[exp]" name="card[exp]">
+                                        <input type="text" placeholder="Código de Reservación" name="policy[code]" id="policy[code]">
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-creditcard-cvv"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">CVV</div>
-                                    <div class="item-input">
-                                        <input type="text" name="card[cvv]"  placeholder="123" maxlength="3" />
+                                    <div class="item-title-row">
+                                        <div class="item-title">Hora</div>
                                     </div>
+                                    <input type="text" placeholder="00:00 AM" name="policy[hour]" id="policy[hour]">
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-name"></i></div>
                                 <div class="item-inner">
-                                    <div class="item-title label">Nombre</div>
-                                    <div class="item-input">
-                                        <input type="text" name="card[name]"  placeholder="Carlos G." />
+                                    <div class="item-title-row">
+                                        <div class="item-title">Fecha</div>
                                     </div>
+                                    <input type="text" placeholder="Mes Dia, Año" name="policy[day]" id="policy[day]">
                                 </div>
                             </div>
                         </li>
@@ -76,12 +78,7 @@
             </div>
 
             <div class="content-block">
-                <div class="row">
-                    <div class="col-66"></div>
-                    <div class="col-33">
-                        <button id="to-step-6" class="button button-big button-fill color-green">Siguiente</button>
-                    </div>
-                </div>
+                <p><a id="to-step-8" href="#" class="button button-big button-round color-green">Generar Póliza</a></p>
             </div>
         </div>
     </div>

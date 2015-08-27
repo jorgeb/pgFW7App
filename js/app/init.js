@@ -51,6 +51,14 @@ myapp.init = (function () {
             new myapp.pages.Step5PageController(fw7App, $$);
         });
 
+        fw7App.onPageInit('step06', function (page) {
+            new myapp.pages.Step6PageController(fw7App, $$);
+        });
+
+        fw7App.onPageInit('step07', function (page) {
+            new myapp.pages.Step7PageController(fw7App, $$);
+        });
+
         function createContentPage() {
             mainView.router.loadContent(
                 '<!-- Top Navbar-->' +

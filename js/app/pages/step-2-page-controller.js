@@ -6,14 +6,15 @@ myapp.pages.Step2PageController = function (myapp, $$) {
     'use strict';
     // Init method
     (function () {
-        var today = new Date();
+        var d = new Date();
+        var today = new Date(d.getFullYear(),d.getMonth(),d.getDate());
         var selectedDate = today;
 
         var pickerInline = myapp.picker({
             input: '#picker-date-roundtrip',
             rotateEffect: true,
 
-            value: [today.getMonth(), today.getDate(), today.getFullYear(), today.getHours(), (today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes())],
+            value: [today.getMonth(), today.getDate(), today.getFullYear()],
 
             onChange: function (picker, values, displayValues) {
                 var daysInMonth = new Date(picker.value[2], picker.value[0]*1 + 1, 0).getDate();
