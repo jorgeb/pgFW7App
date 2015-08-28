@@ -198,3 +198,7 @@ i.icon.icon-form-creditcard-cvv {
 .page[data-page='step04'] .app-name{
     margin: .3em 0;
 }
+
+.hide{
+    display: none;
+}

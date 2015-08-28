@@ -4,9 +4,13 @@ var hoursPicker = function (input) {
     'use strict';
     return {
         input: input,
+        selectedHour:null,
         rotateEffect: true,
         formatValue: function (p, values, displayValues) {
             return values[0] + ':' + values[1] + ' ' + values[2];
+        },
+        onChange: function (picker, values, displayValues) {
+          this.selectedHour = values[0] + ' ' + values[1] + ' ' + values[2]
         },
         cols: [
             {
@@ -30,10 +34,12 @@ var hoursPicker = function (input) {
 
 var datePicker = function (input) {
     'use strict';
+    var today = new Date();
+
     return {
         input: input,
         rotateEffect: true,
-
+        selectedDate:null,
         value: [today.getMonth(), today.getDate(), today.getFullYear()],
 
         onChange: function (picker, values, displayValues) {
@@ -42,7 +48,7 @@ var datePicker = function (input) {
                 picker.cols[1].setValue(daysInMonth);
             }
 
-            selectedDate = new Date(values[2], values[0], values[1], 0, 0,0, 0)
+            this.selectedDate = new Date(values[2], values[0], values[1], 0, 0,0, 0)
         },
 
         formatValue: function (p, values, displayValues) {
@@ -64,7 +70,7 @@ var datePicker = function (input) {
             {
                 values: (function () {
                     var arr = [];
-                    for (var i = 1950; i <= 2030; i++) { arr.push(i); }
+                    for (var i = today.getFullYear(); i <= (today.getFullYear() + 10); i++) { arr.push(i); }
                     return arr;
                 })()
             }

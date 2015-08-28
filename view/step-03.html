@@ -11,7 +11,7 @@
     <div data-page="step03" class="page">
         <!-- Scrollable page content-->
         <div class="page-content">
-            <div class="content-block-title">Se asegura la ruta completa</div>
+            <div class="content-block-title" id="step-3-title">Ruta asegurada</div>
 
             <div class="content-block inset">
                 <div class="content-block-inner">
@@ -23,7 +23,7 @@
                                     <div class="item-title-row">
                                         <div class="item-title">Trayecto Ida</div>
                                     </div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet</div>
+                                    <div class="item-text" id="path3[from]">Lorem ipsum dolor sit amet</div>
                                 </div>
                             </li>
                             <li>
@@ -31,13 +31,14 @@
                                     <div class="item-title-row">
                                         <div class="item-title">Fecha</div>
                                     </div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet</div>
+                                    <div class="item-text" id="fligth3[date]">Lorem ipsum dolor sit amet</div>
                                 </div>
                             </li>
 
                         </ul>
                     </div>
 
+                    <div class="hide" id="roundtrip-3-content">
                     <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. </p>
                     <div class="list-block  media-list inset">
                         <ul>
@@ -46,7 +47,7 @@
                                     <div class="item-title-row">
                                         <div class="item-title">Trayecto Regreso</div>
                                     </div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet</div>
+                                    <div class="item-text" id="path3[to]">Lorem ipsum dolor sit amet</div>
                                 </div>
                             </li>
                             <li>
@@ -54,10 +55,11 @@
                                     <div class="item-title-row">
                                         <div class="item-title">Fecha</div>
                                     </div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet</div>
+                                    <div class="item-text" id="fligth3[dateTo]">Lorem ipsum dolor sit amet</div>
                                 </div>
                             </li>
                         </ul>
+                    </div>
                     </div>
 
                     <div class="list-block media-list">
@@ -67,7 +69,7 @@
                                 <div class="item-inner">
                                     <div class="item-title-row">
                                         <div class="item-title">Equipajes</div>
-                                        <div class="item-after"><span class="badge">5</span></div>
+                                        <div class="item-after"><span class="badge" id="path3[bagages]"></span></div>
                                     </div>
                                     <div class="item-text">Costo seguro por pieza: 150 MXN</div>
                                 </div>
@@ -77,7 +79,7 @@
                                 <div class="item-inner">
                                     <div class="item-title-row">
                                         <div class="item-title">Trayectos</div>
-                                        <div class="item-after"><span class="badge">2</span></div>
+                                        <div class="item-after"><span class="badge" id="path3[paths]">2</span></div>
                                     </div>
                                 </div>
                             </li>
@@ -88,7 +90,7 @@
                                 <div class="item-inner">
                                     <div class="item-title-row">
                                         <div class="item-title">Total</div>
-                                        <div class="item-after">450 MXN</div>
+                                        <div class="item-after" id="total">450 MXN</div>
                                     </div>
                                 </div>
                             </li>

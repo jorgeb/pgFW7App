@@ -11,20 +11,18 @@ myapp.pages.Step1PageController = function (myapp, $$) {
     (function () {
 
         var errors = function(){
-            console.log(selectedDate)
-            console.log(today)
-
             var ret = [];
-             if($$('#sel-from').val() == $$('#sel-to').val())
+             if(policyScope.path["path[from]"] == policyScope.path["path[to]"])
                 ret.push('Por favor ingrese un destino distinto al de origen.')
 
-            if (selectedDate < today)
-                ret.push('Por favor indrese una fecha a futuro.')
 
             return ret;
         }
 
         $$('#to-step-2').click(function () {
+
+            policyScope.path = myapp.formToJSON('#path');
+
             var ver = errors();
             var clossed = 0;
             var $$this = $$(this);

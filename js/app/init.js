@@ -4,6 +4,8 @@ var dynamicPageIndex = 0;
 // Initialize your app
 var myapp = myapp || {};
 
+var policyScope = policyScope || {};
+
 myapp.init = (function () {
     'use strict';
 

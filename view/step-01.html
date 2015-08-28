@@ -11,244 +11,246 @@
     <div data-page="step01" class="page">
         <!-- Scrollable page content-->
         <div class="page-content">
-            <div class="content-block-title">Seleccione una ruta</div>
-            <div class="list-block">
-                <ul>
-                    <!-- Smart select item -->
-                    <li>
-                        <!-- Additional "smart-select" class -->
-                        <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Buscar Origen" data-back-text="Volver">
-                            <!-- select -->
-                            <select name="sel-from" id="sel-from">
-                                <option value="Acapulco" selected>Acapulco</option>
-                                <option value="Aguascalientes" >Aguascalientes</option>
-                                <option value="Bacalar (vía Chetumal)" >Bacalar (vía Chetumal)</option>
-                                <option value="Bajío" >Bajío</option>
-                                <option value="Cabo San Lucas" >Cabo San Lucas</option>
-                                <option value="Campeche" >Campeche</option>
-                                <option value="Cancún" >Cancún</option>
-                                <option value="Cancún (vía Cozumel)" >Cancún (vía Cozumel)</option>
-                                <option value="Cd del Carmen" >Cd del Carmen</option>
-                                <option value="Cd Juárez" >Cd Juárez</option>
-                                <option value="Cd Obregón" >Cd Obregón</option>
-                                <option value="Chetumal" >Chetumal</option>
-                                <option value="Chihuahua" >Chihuahua</option>
-                                <option value="Ciudad de México" >Ciudad de México</option>
-                                <option value="Ciudad del Carmen" >Ciudad del Carmen</option>
-                                <option value="Ciudad Juárez" >Ciudad Juárez</option>
-                                <option value="Ciudad Obregón" >Ciudad Obregón</option>
-                                <option value="Ciudad Victoria" >Ciudad Victoria</option>
-                                <option value="Coatzacoalcos (Minatitlán)" >Coatzacoalcos (Minatitlán)</option>
-                                <option value="Colima" >Colima</option>
-                                <option value="Cozumel" >Cozumel</option>
-                                <option value="Culiacán" >Culiacán</option>
-                                <option value="Durango" >Durango</option>
-                                <option value="Guadalajara" >Guadalajara</option>
-                                <option value="Guanajuato (Bajío)" >Guanajuato (Bajío)</option>
-                                <option value="Hermosillo" >Hermosillo</option>
-                                <option value="Huatulco" >Huatulco</option>
-                                <option value="Ixtapa/Zihuatanejo" >Ixtapa/Zihuatanejo</option>
-                                <option value="Jalapa" >Jalapa</option>
-                                <option value="La Paz, B.C.S., México" >La Paz, B.C.S., México</option>
-                                <option value="Lázaro Cárdenas" >Lázaro Cárdenas</option>
-                                <option value="León/Bajío" >León/Bajío</option>
-                                <option value="Los Cabos" >Los Cabos</option>
-                                <option value="Los Mochis" >Los Mochis</option>
-                                <option value="Mahahual (vía Chetumal)" >Mahahual (vía Chetumal)</option>
-                                <option value="Manzanillo" >Manzanillo</option>
-                                <option value="Matamoros" >Matamoros</option>
-                                <option value="Mazatlán" >Mazatlán</option>
-                                <option value="Mérida" >Mérida</option>
-                                <option value="Mexicali" >Mexicali</option>
-                                <option value="Minatitlán" >Minatitlán</option>
-                                <option value="Monterrey" >Monterrey</option>
-                                <option value="Morelia" >Morelia</option>
-                                <option value="Nuevo Laredo" >Nuevo Laredo</option>
-                                <option value="Oaxaca" >Oaxaca</option>
-                                <option value="Palenque" >Palenque</option>
-                                <option value="Piedras Negras" >Piedras Negras</option>
-                                <option value="Playa del Carmen (Cancún)" >Playa del Carmen (Cancún)</option>
-                                <option value="Poza Rica" >Poza Rica</option>
-                                <option value="Pto Escondido" >Pto Escondido</option>
-                                <option value="Puebla" >Puebla</option>
-                                <option value="Puerto Escondido" >Puerto Escondido</option>
-                                <option value="Puerto Vallarta" >Puerto Vallarta</option>
-                                <option value="Querétaro" >Querétaro</option>
-                                <option value="Reynosa" >Reynosa</option>
-                                <option value="Riviera Maya (Cancún)" >Riviera Maya (Cancún)</option>
-                                <option value="Riviera Maya (vía Cozumel)" >Riviera Maya (vía Cozumel)</option>
-                                <option value="Riviera Nayarit (Puerto Vallarta)" >Riviera Nayarit (Puerto Vallarta)</option>
-                                <option value="Saltillo" >Saltillo</option>
-                                <option value="San Luis Potosí" >San Luis Potosí</option>
-                                <option value="Tampico" >Tampico</option>
-                                <option value="Tapachula" >Tapachula</option>
-                                <option value="Tepic" >Tepic</option>
-                                <option value="Tijuana" >Tijuana</option>
-                                <option value="Toluca" >Toluca</option>
-                                <option value="Torreón" >Torreón</option>
-                                <option value="Tulum (vía Chetumal)" >Tulum (vía Chetumal)</option>
-                                <option value="Tuxtla Gutiérrez" >Tuxtla Gutiérrez</option>
-                                <option value="Veracruz" >Veracruz</option>
-                                <option value="Villahermosa" >Villahermosa</option>
-                                <option value="Zacatecas" >Zacatecas</option>
-                                <option value="Zihuatanejo" >Zihuatanejo</option>
-                            </select>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <!-- Select label -->
-                                    <div class="item-title">Origen</div>
-                                    <!-- Selected value, not required -->
-                                    <div class="item-after"></div>
+            <form id="path" name="path">
+                <div class="content-block-title">Seleccione una ruta</div>
+                <div class="list-block">
+                    <ul>
+                        <!-- Smart select item -->
+                        <li>
+                            <!-- Additional "smart-select" class -->
+                            <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Buscar Origen" data-back-text="Volver">
+                                <!-- select -->
+                                <select name="path[from]" id="path[from]">
+                                    <option value="Acapulco" selected>Acapulco</option>
+                                    <option value="Aguascalientes" >Aguascalientes</option>
+                                    <option value="Bacalar (vía Chetumal)" >Bacalar (vía Chetumal)</option>
+                                    <option value="Bajío" >Bajío</option>
+                                    <option value="Cabo San Lucas" >Cabo San Lucas</option>
+                                    <option value="Campeche" >Campeche</option>
+                                    <option value="Cancún" >Cancún</option>
+                                    <option value="Cancún (vía Cozumel)" >Cancún (vía Cozumel)</option>
+                                    <option value="Cd del Carmen" >Cd del Carmen</option>
+                                    <option value="Cd Juárez" >Cd Juárez</option>
+                                    <option value="Cd Obregón" >Cd Obregón</option>
+                                    <option value="Chetumal" >Chetumal</option>
+                                    <option value="Chihuahua" >Chihuahua</option>
+                                    <option value="Ciudad de México" >Ciudad de México</option>
+                                    <option value="Ciudad del Carmen" >Ciudad del Carmen</option>
+                                    <option value="Ciudad Juárez" >Ciudad Juárez</option>
+                                    <option value="Ciudad Obregón" >Ciudad Obregón</option>
+                                    <option value="Ciudad Victoria" >Ciudad Victoria</option>
+                                    <option value="Coatzacoalcos (Minatitlán)" >Coatzacoalcos (Minatitlán)</option>
+                                    <option value="Colima" >Colima</option>
+                                    <option value="Cozumel" >Cozumel</option>
+                                    <option value="Culiacán" >Culiacán</option>
+                                    <option value="Durango" >Durango</option>
+                                    <option value="Guadalajara" >Guadalajara</option>
+                                    <option value="Guanajuato (Bajío)" >Guanajuato (Bajío)</option>
+                                    <option value="Hermosillo" >Hermosillo</option>
+                                    <option value="Huatulco" >Huatulco</option>
+                                    <option value="Ixtapa/Zihuatanejo" >Ixtapa/Zihuatanejo</option>
+                                    <option value="Jalapa" >Jalapa</option>
+                                    <option value="La Paz, B.C.S., México" >La Paz, B.C.S., México</option>
+                                    <option value="Lázaro Cárdenas" >Lázaro Cárdenas</option>
+                                    <option value="León/Bajío" >León/Bajío</option>
+                                    <option value="Los Cabos" >Los Cabos</option>
+                                    <option value="Los Mochis" >Los Mochis</option>
+                                    <option value="Mahahual (vía Chetumal)" >Mahahual (vía Chetumal)</option>
+                                    <option value="Manzanillo" >Manzanillo</option>
+                                    <option value="Matamoros" >Matamoros</option>
+                                    <option value="Mazatlán" >Mazatlán</option>
+                                    <option value="Mérida" >Mérida</option>
+                                    <option value="Mexicali" >Mexicali</option>
+                                    <option value="Minatitlán" >Minatitlán</option>
+                                    <option value="Monterrey" >Monterrey</option>
+                                    <option value="Morelia" >Morelia</option>
+                                    <option value="Nuevo Laredo" >Nuevo Laredo</option>
+                                    <option value="Oaxaca" >Oaxaca</option>
+                                    <option value="Palenque" >Palenque</option>
+                                    <option value="Piedras Negras" >Piedras Negras</option>
+                                    <option value="Playa del Carmen (Cancún)" >Playa del Carmen (Cancún)</option>
+                                    <option value="Poza Rica" >Poza Rica</option>
+                                    <option value="Pto Escondido" >Pto Escondido</option>
+                                    <option value="Puebla" >Puebla</option>
+                                    <option value="Puerto Escondido" >Puerto Escondido</option>
+                                    <option value="Puerto Vallarta" >Puerto Vallarta</option>
+                                    <option value="Querétaro" >Querétaro</option>
+                                    <option value="Reynosa" >Reynosa</option>
+                                    <option value="Riviera Maya (Cancún)" >Riviera Maya (Cancún)</option>
+                                    <option value="Riviera Maya (vía Cozumel)" >Riviera Maya (vía Cozumel)</option>
+                                    <option value="Riviera Nayarit (Puerto Vallarta)" >Riviera Nayarit (Puerto Vallarta)</option>
+                                    <option value="Saltillo" >Saltillo</option>
+                                    <option value="San Luis Potosí" >San Luis Potosí</option>
+                                    <option value="Tampico" >Tampico</option>
+                                    <option value="Tapachula" >Tapachula</option>
+                                    <option value="Tepic" >Tepic</option>
+                                    <option value="Tijuana" >Tijuana</option>
+                                    <option value="Toluca" >Toluca</option>
+                                    <option value="Torreón" >Torreón</option>
+                                    <option value="Tulum (vía Chetumal)" >Tulum (vía Chetumal)</option>
+                                    <option value="Tuxtla Gutiérrez" >Tuxtla Gutiérrez</option>
+                                    <option value="Veracruz" >Veracruz</option>
+                                    <option value="Villahermosa" >Villahermosa</option>
+                                    <option value="Zacatecas" >Zacatecas</option>
+                                    <option value="Zihuatanejo" >Zihuatanejo</option>
+                                </select>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <!-- Select label -->
+                                        <div class="item-title">Origen</div>
+                                        <!-- Selected value, not required -->
+                                        <div class="item-after"></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- Smart select item -->
-                    <li>
-                        <!-- Additional "smart-select" class -->
-                        <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Buscar Destino" data-back-text="Volver">
-                            <!-- select -->
-                            <select name="sel-to" id="sel-to">
-                                <option value="Acapulco" selected>Acapulco</option>
-                                <option value="Aguascalientes" >Aguascalientes</option>
-                                <option value="Bacalar (vía Chetumal)" >Bacalar (vía Chetumal)</option>
-                                <option value="Bajío" >Bajío</option>
-                                <option value="Cabo San Lucas" >Cabo San Lucas</option>
-                                <option value="Campeche" >Campeche</option>
-                                <option value="Cancún" >Cancún</option>
-                                <option value="Cancún (vía Cozumel)" >Cancún (vía Cozumel)</option>
-                                <option value="Cd del Carmen" >Cd del Carmen</option>
-                                <option value="Cd Juárez" >Cd Juárez</option>
-                                <option value="Cd Obregón" >Cd Obregón</option>
-                                <option value="Chetumal" >Chetumal</option>
-                                <option value="Chihuahua" >Chihuahua</option>
-                                <option value="Ciudad de México" >Ciudad de México</option>
-                                <option value="Ciudad del Carmen" >Ciudad del Carmen</option>
-                                <option value="Ciudad Juárez" >Ciudad Juárez</option>
-                                <option value="Ciudad Obregón" >Ciudad Obregón</option>
-                                <option value="Ciudad Victoria" >Ciudad Victoria</option>
-                                <option value="Coatzacoalcos (Minatitlán)" >Coatzacoalcos (Minatitlán)</option>
-                                <option value="Colima" >Colima</option>
-                                <option value="Cozumel" >Cozumel</option>
-                                <option value="Culiacán" >Culiacán</option>
-                                <option value="Durango" >Durango</option>
-                                <option value="Guadalajara" >Guadalajara</option>
-                                <option value="Guanajuato (Bajío)" >Guanajuato (Bajío)</option>
-                                <option value="Hermosillo" >Hermosillo</option>
-                                <option value="Huatulco" >Huatulco</option>
-                                <option value="Ixtapa/Zihuatanejo" >Ixtapa/Zihuatanejo</option>
-                                <option value="Jalapa" >Jalapa</option>
-                                <option value="La Paz, B.C.S., México" >La Paz, B.C.S., México</option>
-                                <option value="Lázaro Cárdenas" >Lázaro Cárdenas</option>
-                                <option value="León/Bajío" >León/Bajío</option>
-                                <option value="Los Cabos" >Los Cabos</option>
-                                <option value="Los Mochis" >Los Mochis</option>
-                                <option value="Mahahual (vía Chetumal)" >Mahahual (vía Chetumal)</option>
-                                <option value="Manzanillo" >Manzanillo</option>
-                                <option value="Matamoros" >Matamoros</option>
-                                <option value="Mazatlán" >Mazatlán</option>
-                                <option value="Mérida" >Mérida</option>
-                                <option value="Mexicali" >Mexicali</option>
-                                <option value="Minatitlán" >Minatitlán</option>
-                                <option value="Monterrey" >Monterrey</option>
-                                <option value="Morelia" >Morelia</option>
-                                <option value="Nuevo Laredo" >Nuevo Laredo</option>
-                                <option value="Oaxaca" >Oaxaca</option>
-                                <option value="Palenque" >Palenque</option>
-                                <option value="Piedras Negras" >Piedras Negras</option>
-                                <option value="Playa del Carmen (Cancún)" >Playa del Carmen (Cancún)</option>
-                                <option value="Poza Rica" >Poza Rica</option>
-                                <option value="Pto Escondido" >Pto Escondido</option>
-                                <option value="Puebla" >Puebla</option>
-                                <option value="Puerto Escondido" >Puerto Escondido</option>
-                                <option value="Puerto Vallarta" >Puerto Vallarta</option>
-                                <option value="Querétaro" >Querétaro</option>
-                                <option value="Reynosa" >Reynosa</option>
-                                <option value="Riviera Maya (Cancún)" >Riviera Maya (Cancún)</option>
-                                <option value="Riviera Maya (vía Cozumel)" >Riviera Maya (vía Cozumel)</option>
-                                <option value="Riviera Nayarit (Puerto Vallarta)" >Riviera Nayarit (Puerto Vallarta)</option>
-                                <option value="Saltillo" >Saltillo</option>
-                                <option value="San Luis Potosí" >San Luis Potosí</option>
-                                <option value="Tampico" >Tampico</option>
-                                <option value="Tapachula" >Tapachula</option>
-                                <option value="Tepic" >Tepic</option>
-                                <option value="Tijuana" >Tijuana</option>
-                                <option value="Toluca" >Toluca</option>
-                                <option value="Torreón" >Torreón</option>
-                                <option value="Tulum (vía Chetumal)" >Tulum (vía Chetumal)</option>
-                                <option value="Tuxtla Gutiérrez" >Tuxtla Gutiérrez</option>
-                                <option value="Veracruz" >Veracruz</option>
-                                <option value="Villahermosa" >Villahermosa</option>
-                                <option value="Zacatecas" >Zacatecas</option>
-                                <option value="Zihuatanejo" selected >Zihuatanejo</option>
-                            </select>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <!-- Select label -->
-                                    <div class="item-title">Destino</div>
-                                    <!-- Selected value, not required -->
-                                    <div class="item-after"></div>
+                            </a>
+                        </li>
+                        <!-- Smart select item -->
+                        <li>
+                            <!-- Additional "smart-select" class -->
+                            <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Buscar Destino" data-back-text="Volver">
+                                <!-- select -->
+                                <select name="path[to]" id="path[to]">
+                                    <option value="Acapulco" selected>Acapulco</option>
+                                    <option value="Aguascalientes" >Aguascalientes</option>
+                                    <option value="Bacalar (vía Chetumal)" >Bacalar (vía Chetumal)</option>
+                                    <option value="Bajío" >Bajío</option>
+                                    <option value="Cabo San Lucas" >Cabo San Lucas</option>
+                                    <option value="Campeche" >Campeche</option>
+                                    <option value="Cancún" >Cancún</option>
+                                    <option value="Cancún (vía Cozumel)" >Cancún (vía Cozumel)</option>
+                                    <option value="Cd del Carmen" >Cd del Carmen</option>
+                                    <option value="Cd Juárez" >Cd Juárez</option>
+                                    <option value="Cd Obregón" >Cd Obregón</option>
+                                    <option value="Chetumal" >Chetumal</option>
+                                    <option value="Chihuahua" >Chihuahua</option>
+                                    <option value="Ciudad de México" >Ciudad de México</option>
+                                    <option value="Ciudad del Carmen" >Ciudad del Carmen</option>
+                                    <option value="Ciudad Juárez" >Ciudad Juárez</option>
+                                    <option value="Ciudad Obregón" >Ciudad Obregón</option>
+                                    <option value="Ciudad Victoria" >Ciudad Victoria</option>
+                                    <option value="Coatzacoalcos (Minatitlán)" >Coatzacoalcos (Minatitlán)</option>
+                                    <option value="Colima" >Colima</option>
+                                    <option value="Cozumel" >Cozumel</option>
+                                    <option value="Culiacán" >Culiacán</option>
+                                    <option value="Durango" >Durango</option>
+                                    <option value="Guadalajara" >Guadalajara</option>
+                                    <option value="Guanajuato (Bajío)" >Guanajuato (Bajío)</option>
+                                    <option value="Hermosillo" >Hermosillo</option>
+                                    <option value="Huatulco" >Huatulco</option>
+                                    <option value="Ixtapa/Zihuatanejo" >Ixtapa/Zihuatanejo</option>
+                                    <option value="Jalapa" >Jalapa</option>
+                                    <option value="La Paz, B.C.S., México" >La Paz, B.C.S., México</option>
+                                    <option value="Lázaro Cárdenas" >Lázaro Cárdenas</option>
+                                    <option value="León/Bajío" >León/Bajío</option>
+                                    <option value="Los Cabos" >Los Cabos</option>
+                                    <option value="Los Mochis" >Los Mochis</option>
+                                    <option value="Mahahual (vía Chetumal)" >Mahahual (vía Chetumal)</option>
+                                    <option value="Manzanillo" >Manzanillo</option>
+                                    <option value="Matamoros" >Matamoros</option>
+                                    <option value="Mazatlán" >Mazatlán</option>
+                                    <option value="Mérida" >Mérida</option>
+                                    <option value="Mexicali" >Mexicali</option>
+                                    <option value="Minatitlán" >Minatitlán</option>
+                                    <option value="Monterrey" >Monterrey</option>
+                                    <option value="Morelia" >Morelia</option>
+                                    <option value="Nuevo Laredo" >Nuevo Laredo</option>
+                                    <option value="Oaxaca" >Oaxaca</option>
+                                    <option value="Palenque" >Palenque</option>
+                                    <option value="Piedras Negras" >Piedras Negras</option>
+                                    <option value="Playa del Carmen (Cancún)" >Playa del Carmen (Cancún)</option>
+                                    <option value="Poza Rica" >Poza Rica</option>
+                                    <option value="Pto Escondido" >Pto Escondido</option>
+                                    <option value="Puebla" >Puebla</option>
+                                    <option value="Puerto Escondido" >Puerto Escondido</option>
+                                    <option value="Puerto Vallarta" >Puerto Vallarta</option>
+                                    <option value="Querétaro" >Querétaro</option>
+                                    <option value="Reynosa" >Reynosa</option>
+                                    <option value="Riviera Maya (Cancún)" >Riviera Maya (Cancún)</option>
+                                    <option value="Riviera Maya (vía Cozumel)" >Riviera Maya (vía Cozumel)</option>
+                                    <option value="Riviera Nayarit (Puerto Vallarta)" >Riviera Nayarit (Puerto Vallarta)</option>
+                                    <option value="Saltillo" >Saltillo</option>
+                                    <option value="San Luis Potosí" >San Luis Potosí</option>
+                                    <option value="Tampico" >Tampico</option>
+                                    <option value="Tapachula" >Tapachula</option>
+                                    <option value="Tepic" >Tepic</option>
+                                    <option value="Tijuana" >Tijuana</option>
+                                    <option value="Toluca" >Toluca</option>
+                                    <option value="Torreón" >Torreón</option>
+                                    <option value="Tulum (vía Chetumal)" >Tulum (vía Chetumal)</option>
+                                    <option value="Tuxtla Gutiérrez" >Tuxtla Gutiérrez</option>
+                                    <option value="Veracruz" >Veracruz</option>
+                                    <option value="Villahermosa" >Villahermosa</option>
+                                    <option value="Zacatecas" >Zacatecas</option>
+                                    <option value="Zihuatanejo" selected >Zihuatanejo</option>
+                                </select>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <!-- Select label -->
+                                        <div class="item-title">Destino</div>
+                                        <!-- Selected value, not required -->
+                                        <div class="item-after"></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="content-block-title">Equipajes a Documentar</div>
-            <div class="list-block">
-                <ul>
-                    <!-- Smart select item -->
-                    <li>
-                        <!-- Additional "smart-select" class -->
-                        <a href="#" class="item-link smart-select" data-back-text="Volver">
-                            <!-- select -->
-                            <select name="path[bagages]" id="path[bagages]">
-                                <option value="1" selected>Uno</option>
-                                <option value="2" >Dos</option>
-                                <option value="3" >Tres</option>
-                                <option value="4" >Cuatro</option>
-                                <option value="5" >Cinco</option>
-                                <option value="6" >Seis</option>
-                                <option value="7" >Siete</option>
-                                <option value="8" >Ocho</option>
-                                <option value="9" >Nueve</option>
-                                <option value="10" >Diez</option>
-                            </select>
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <!-- Select label -->
-                                    <div class="item-title">Cantidad</div>
-                                    <!-- Selected value, not required -->
-                                    <div class="item-after"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">Equipajes a Documentar</div>
+                <div class="list-block">
+                    <ul>
+                        <!-- Smart select item -->
+                        <li>
+                            <!-- Additional "smart-select" class -->
+                            <a href="#" class="item-link smart-select" data-back-text="Volver">
+                                <!-- select -->
+                                <select name="path[bagages]" id="path[bagages]">
+                                    <option value="1" selected>Uno</option>
+                                    <option value="2" >Dos</option>
+                                    <option value="3" >Tres</option>
+                                    <option value="4" >Cuatro</option>
+                                    <option value="5" >Cinco</option>
+                                    <option value="6" >Seis</option>
+                                    <option value="7" >Siete</option>
+                                    <option value="8" >Ocho</option>
+                                    <option value="9" >Nueve</option>
+                                    <option value="10" >Diez</option>
+                                </select>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <!-- Select label -->
+                                        <div class="item-title">Cantidad</div>
+                                        <!-- Selected value, not required -->
+                                        <div class="item-after"></div>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="content-block-title">Tipo de Viaje</div>
-            <div class="list-block">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title" style="width:auto">Viaje Redondo</div>
-                                <div class="item-after">
-                                    <label class="label-switch">
-                                        <input type="checkbox" id="path[roundtrip]">
-                                        <div class="checkbox"></div>
-                                    </label>
+                <div class="content-block-title">Tipo de Viaje</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title" style="width:auto">Viaje Redondo</div>
+                                    <div class="item-after">
+                                        <label class="label-switch">
+                                            <input type="checkbox" id="path[roundtrip]" name="path[roundtrip]">
+                                            <div class="checkbox"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="content-block">
-                <p><a id="to-step-2" href="#" class="button button-big button-round color-green">Vuelo</a></p>
-            </div>
+                <div class="content-block">
+                    <p><a id="to-step-2" href="#" class="button button-big button-round color-green">Vuelo</a></p>
+                </div>
+            </form>
         </div>
     </div>
 </div>

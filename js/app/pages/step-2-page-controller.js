@@ -6,28 +6,48 @@ myapp.pages.Step2PageController = function (myapp, $$) {
     'use strict';
     // Init method
     (function () {
-        var d = new Date();
-        var today = new Date(d.getFullYear(),d.getMonth(),d.getDate());
-        var selectedDate = today;
+        var hpfd = hoursPicker('#fligth[hour]');
+        myapp.picker(hpfd);
 
-        myapp.picker(hoursPicker("#fligth[hour]"));
-        myapp.picker(hoursPicker("#fligth[returnhour]"));
+        var hpfr = hoursPicker('#fligth[returnhour]');
+        myapp.picker(hpfr);
 
-        myapp.picker(datePicker("#fligth[day]"));
-        myapp.picker(datePicker("#fligth[returnday]"));
+        var dpfd = datePicker('#fligth[day]');
+        myapp.picker(dpfd);
+
+        var dpfr = datePicker('#fligth[returnday]');
+        myapp.picker(dpfr);
+
+        if(policyScope.path['path[roundtrip]'].length > 0)
+            $$('#roundtrip-content').show();
+
 
         var errors = function(){
             var ret = [];
-            var isChecked = $$('#roundtrip').prop('checked');
 
-            if (isChecked && (selectedDate < today))
-                ret.push('Por favor ingrese una fecha posterior a la ida.')
+            if(!hpfd.selectedHour)
+                ret.push('Por favor ingrese una hora, para la salida del vuelo.')
+
+            if(!dpfd.selectedDate)
+                ret.push('Por favor ingrese una fecha, para la salida del vuelo.')
+
+            if(policyScope.path['path[roundtrip]'].length > 0){
+                if(!hpfr.selectedHour)
+                    ret.push('Por favor ingrese una hora, para el vuelo de regreso.')
+
+                if(!dpfr.selectedDate)
+                    ret.push('Por favor ingrese una fecha, para el vuelo de regreso.')
+
+            }
 
             return ret;
         }
 
 
         $$('#to-step-3').click(function () {
+
+            policyScope.fligth = myapp.formToJSON('#fligth');
+
             var ver = errors();
             var clossed = 0;
             var $$this = $$(this);
@@ -55,3 +75,4 @@ myapp.pages.Step2PageController = function (myapp, $$) {
     }());
 
 };
+
