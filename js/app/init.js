@@ -24,6 +24,11 @@ myapp.init = (function () {
 
         ipc = new myapp.pages.IndexPageController(fw7App, $$);
 
+
+        $$(document).on('deviceready', function(){
+            console.log('scanning');
+        })
+
         // Callbacks to run specific code for specific pages, for example for About page:
         fw7App.onPageInit('about', function (page) {
             console.log('about')
@@ -39,6 +44,10 @@ myapp.init = (function () {
 
         fw7App.onPageInit('step02', function (page) {
             new myapp.pages.Step2PageController(fw7App, $$);
+        });
+
+        fw7App.onPageInit('step03b', function (page) {
+            new myapp.pages.Step21PageController(fw7App, $$);
         });
 
         fw7App.onPageInit('step03', function (page) {

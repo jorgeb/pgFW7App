@@ -7,6 +7,7 @@ myapp.pages.Step7PageController = function (myapp, $$) {
     // Init method
     (function () {
 
+
         myapp.picker({
             input: '#policy[hour]',
             rotateEffect: true,

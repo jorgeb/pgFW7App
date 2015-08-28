@@ -22,6 +22,7 @@ myapp.pages.Step1PageController = function (myapp, $$) {
         $$('#to-step-2').click(function () {
 
             policyScope.path = myapp.formToJSON('#path');
+            policyScope.previous = 'step-1';
 
             var ver = errors();
             var clossed = 0;
@@ -44,7 +45,7 @@ myapp.pages.Step1PageController = function (myapp, $$) {
                 $$this.attr('disabled','disabled');
             }
             else
-                myapp.getCurrentView().router.loadPage('./view/step-02.html');
+                myapp.getCurrentView().router.loadPage('./view/step-03.html');
         });
 
     }());

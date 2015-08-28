@@ -69,7 +69,7 @@ myapp.pages.Step2PageController = function (myapp, $$) {
                 $$this.attr('disabled','disabled');
             }
             else
-                myapp.getCurrentView().router.loadPage('./view/step-03.html');
+                myapp.getCurrentView().router.loadPage('./view/step-02.1.html');
         });
 
     }());
