@@ -51,7 +51,7 @@ myapp.pages.Step6PageController = function (myapp, $$) {
                 $$.ajax ({
                     //http://localhost:3010/api/email/invoice/jabaux@gmail.com/horge a bou/2/yes
                     ///api/email/invoice/jabaux@gmail.com/Jorge%20Ahora%20Si!/2/yes
-                    url: 'http://104.236.242.105:3000/api/email/invoice/'
+                    url: 'http://104.236.242.105:3010/api/email/invoice/'
                         + policyScope.invoice['invoice[email]']
                         + '/' + policyScope.invoice['invoice[name]']
                         + '/2/yes',
