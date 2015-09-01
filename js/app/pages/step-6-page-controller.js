@@ -15,6 +15,9 @@ myapp.pages.Step6PageController = function (myapp, $$) {
 
 
         $$('#lnk-end').click(function () {
+
+            policyScope.invoice = myapp.formToJSON('#frm-invoice');
+
             var ver = errors();
             var clossed = 0;
             var $$this = $$(this);
@@ -35,8 +38,47 @@ myapp.pages.Step6PageController = function (myapp, $$) {
 
                 $$this.attr('disabled','disabled');
             }
-            else
-                myapp.getCurrentView().router.loadPage('./view/step-07.html');
+            else {
+                myapp.showPreloader();
+
+                console.log('http://192.168.1.101:3010/api/email/invoice/'
+                    + policyScope.invoice['invoice[email]']
+                    + '/' + policyScope.invoice['invoice[name]']
+                    + '/2/yes');
+
+                //http://192.168.1.101:3010/api/email/invoice/jabaux@gmail.com/T/2/yes
+                //http://localhost:3010    /api/email/invoice/jabaux@gmail.com/T/2/yes
+                $$.ajax ({
+                    //http://localhost:3010/api/email/invoice/jabaux@gmail.com/horge a bou/2/yes
+                    ///api/email/invoice/jabaux@gmail.com/Jorge%20Ahora%20Si!/2/yes
+                    url: 'http://104.236.242.105:3000/api/email/invoice/'
+                        + policyScope.invoice['invoice[email]']
+                        + '/' + policyScope.invoice['invoice[name]']
+                        + '/2/yes',
+                    dataType: 'text',
+                    method:'GET',
+                    success: function(json, status, xhr) {
+
+                        console.log(json);
+                        console.log('inside ' + status);
+
+                        console.log(xhr.status);
+                        console.log(xhr.response);
+                        console.log(xhr.responseText)
+                        console.log(xhr.statusText);
+
+                        myapp.hidePreloader();
+                        myapp.getCurrentView().router.loadPage('./view/step-07.html');
+                    },
+
+                    error: function( jqXHR, status, error ) { // activated in iPad Safari as 200 ? w/o snd params
+                        console.log('error ' + jqXHR.statusText);
+                        myapp.hidePreloader();
+                        myapp.alert(jqXHR.statusText, 'Error en el envió de mail');
+                    }
+                });
+
+            }
         });
 
     }());
