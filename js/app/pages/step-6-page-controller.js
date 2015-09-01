@@ -41,16 +41,7 @@ myapp.pages.Step6PageController = function (myapp, $$) {
             else {
                 myapp.showPreloader();
 
-                console.log('http://192.168.1.101:3010/api/email/invoice/'
-                    + policyScope.invoice['invoice[email]']
-                    + '/' + policyScope.invoice['invoice[name]']
-                    + '/2/yes');
-
-                //http://192.168.1.101:3010/api/email/invoice/jabaux@gmail.com/T/2/yes
-                //http://localhost:3010    /api/email/invoice/jabaux@gmail.com/T/2/yes
                 $$.ajax ({
-                    //http://localhost:3010/api/email/invoice/jabaux@gmail.com/horge a bou/2/yes
-                    ///api/email/invoice/jabaux@gmail.com/Jorge%20Ahora%20Si!/2/yes
                     url: 'http://104.236.242.105:3010/api/email/invoice/'
                         + policyScope.invoice['invoice[email]']
                         + '/' + policyScope.invoice['invoice[name]']
