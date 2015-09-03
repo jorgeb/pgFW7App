@@ -62,7 +62,7 @@ myapp.pages.SignInPageController = function (myapp, $$) {
                         });
 
                         myapp.hidePreloader();
-                        myapp.getCurrentView().router.loadPage('./view/step-03.html');
+                        myapp.getCurrentView().router.loadPage('./view/step-05.html');
                     },
 
                     error: function( jqXHR, status) { // activated in iPad Safari as 200 ? w/o snd params
