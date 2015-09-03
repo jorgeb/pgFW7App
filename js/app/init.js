@@ -5,6 +5,26 @@ var dynamicPageIndex = 0;
 var myapp = myapp || {};
 
 var policyScope = policyScope || {};
+policyScope.baseUrl = 'http://104.236.242.105:3010/api/';
+policyScope.baseUrl = 'http://192.168.1.101:3010/api/';
+policyScope.user = {};
+
+var storage = new secStore
+    , ssOptions = {
+        encrypt: true,
+        passphrase:'1968',
+        data:{}
+    };
+
+try{
+    storage.get(ssOptions, function(err, results){
+        if (err) throw err;
+    });
+
+}catch(e){
+    storage.set(ssOptions, function(err, results){});
+}
+
 
 myapp.init = (function () {
     'use strict';
@@ -68,6 +88,10 @@ myapp.init = (function () {
 
         fw7App.onPageInit('step07', function (page) {
             new myapp.pages.Step7PageController(fw7App, $$);
+        });
+
+        fw7App.onPageInit('sign-in', function (page) {
+            new myapp.pages.SignInPageController(fw7App, $$);
         });
 
         function createContentPage() {

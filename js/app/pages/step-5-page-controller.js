@@ -4,6 +4,7 @@ myapp.pages = myapp.pages || {};
 
 myapp.pages.Step5PageController = function (myapp, $$) {
     'use strict';
+
     // Init method
     (function () {
         myapp.picker({

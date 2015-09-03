@@ -203,3 +203,22 @@ i.icon.icon-form-creditcard-cvv {
     display: none;
 }
 
+
+.swiper-wrapper .app-name{
+    color:#fff;
+    margin: 0;
+}
+
+.swiper-wrapper .app-name:first-letter{
+    font-weight: bold;
+    color: #e7e7e7;
+}
+
+
+.welcomescreen-text{
+    font-size: 14px;
+}
+.welcomescreen-text li{
+    text-align: left;
+    list-style:none;
+}

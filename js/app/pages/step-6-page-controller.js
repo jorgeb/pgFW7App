@@ -13,6 +13,15 @@ myapp.pages.Step6PageController = function (myapp, $$) {
             return ret;
         }
 
+        var setInvoiceForm = {};
+        setInvoiceForm['invoice[name]'] = policyScope.DBuser.displayName;
+        setInvoiceForm['invoice[email]'] = policyScope.DBuser.email;
+
+        /*
+        $$('#invoice[email]').val(setInvoiceForm['invoice[email]']);
+        $$('#invoice[name]').val(setInvoiceForm['invoice[name]']);
+*/
+        myapp.formFromJSON('#frm-invoice', setInvoiceForm);
 
         $$('#lnk-end').click(function () {
 
@@ -41,8 +50,9 @@ myapp.pages.Step6PageController = function (myapp, $$) {
             else {
                 myapp.showPreloader();
 
+
                 $$.ajax ({
-                    url: 'http://104.236.242.105:3010/api/email/invoice/'
+                    url:  policyScope.baseUrl + 'email/invoice/'
                         + policyScope.invoice['invoice[email]']
                         + '/' + policyScope.invoice['invoice[name]']
                         + '/2/yes',
@@ -50,14 +60,7 @@ myapp.pages.Step6PageController = function (myapp, $$) {
                     method:'GET',
                     success: function(json, status, xhr) {
 
-                        console.log(json);
                         console.log('inside ' + status);
-
-                        console.log(xhr.status);
-                        console.log(xhr.response);
-                        console.log(xhr.responseText)
-                        console.log(xhr.statusText);
-
                         myapp.hidePreloader();
                         myapp.getCurrentView().router.loadPage('./view/step-07.html');
                     },

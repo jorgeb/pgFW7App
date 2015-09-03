@@ -55,20 +55,20 @@
               </div>
 
               <div class="content-block-inner content-block-inner-selector">
-                Selecciona un producto:
+                PRODUCTOS DISPONIBLES:
               </div>
 
 
               <div class="list-block media-list">
                   <ul>
                     <li>
-                      <a href="./view/step-07.html" class="item-link item-content">
+                      <a href="./view/sign-in.html" class="item-link item-content">
                         <div class="item-media"><i class="flaticon-suitcases6 flaticon-rounded flaticon-rounded-pink"></i></div>
                         <div class="item-inner">
                            <div class="item-title-row">
-                            <div class="item-title">Viajero</div>
+                            <div class="item-title">VIAJERO</div>
                           </div>
-                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                          <div class="item-text">Seguro Vida, Autos, Accidentes, Médicos, Educacionales</div>
                         </div>
                       </a>
                     </li>
@@ -77,9 +77,9 @@
                         <div class="item-media"><i class="flaticon-heart56 flaticon-rounded flaticon-rounded-green"></i></div>
                         <div class="item-inner">
                           <div class="item-title-row">
-                            <div class="item-title">Extravío de Equipaje</div>
+                            <div class="item-title">PROTECCION EQUIPAJE</div>
                           </div>
-                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                          <div class="item-text">Seguro Equipaje, Hoteles, Alquiler autos, Cruceros</div>
                         </div>
                       </a>
                     </li>
@@ -88,9 +88,9 @@
                         <div class="item-media"><i class="flaticon-flight1 flaticon-rounded flaticon-rounded-lightblue"></i></div>
                         <div class="item-inner">
                           <div class="item-title-row">
-                            <div class="item-title">Cancelación de Vuelo</div>
+                            <div class="item-title">CANCELACION VUELO</div>
                           </div>
-                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                          <div class="item-text">Seguro Viaje, Reservaciones, Hoteles, Traslados</div>
                         </div>
                       </a>
                     </li>
@@ -99,9 +99,9 @@
                         <div class="item-media"><i class="flaticon-airplane71 flaticon-rounded flaticon-rounded-gray"></i></div>
                         <div class="item-inner">
                           <div class="item-title-row">
-                            <div class="item-title">Demora de Vuelo</div>
+                            <div class="item-title">DEMORA VUELO</div>
                           </div>
-                          <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tortor, mattis at nisl eget, maximus condimentum ante. Aliquam erat volutpat. Morbi non efficitur nibh</div>
+                          <div class="item-text">Seguro Hospedaje, Protección Vuelo, Médicos, Traslados</div>
                         </div>
                       </a>
                     </li>
@@ -116,12 +116,56 @@
         </div>
       </div>
     </div>
+
+    <div class="login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Tripper Lock</div>
+            <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">E-Mail</div>
+                      <div class="item-input">
+                        <input type="text" name="lgiusername" id="lgiusername"  placeholder="Tu E-Mail">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Contraseña</div>
+                      <div class="item-input">
+                        <input type="password" name="lgipassword" id="lgipassword" placeholder="Tu Contraseña">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="#" class="item-link list-button" id="lgisignin">Entrar</a></li>
+                </ul>
+                <div class="list-block-label">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p><a href="#" class="close-login-screen">Cerrar</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Cordova Library-->
     <script type="text/javascript" src="cordova.js"></script>
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="./js/lib/framework7.min.js"></script>
 
     <script type="text/javascript" src="./js/lib/welcomescreen.js"></script>
+    <script src="./js/lib/sjcl.js"></script>
+    <script src="./js/lib/secStore.min.js"></script>
 
     <!-- Path to pages -->
     <script type="text/javascript" src="./js/app/pages/index-page-controller.js"></script>
@@ -133,6 +177,7 @@
     <script type="text/javascript" src="./js/app/pages/step-5-page-controller.js"></script>
     <script type="text/javascript" src="./js/app/pages/step-6-page-controller.js"></script>
     <script type="text/javascript" src="./js/app/pages/step-7-page-controller.js"></script>
+    <script type="text/javascript" src="./js/app/pages/sign-in-page-controller.js"></script>
 
     <!-- Path to your app js-->
     <script type="text/javascript" src="./js/app/init.js"></script>
