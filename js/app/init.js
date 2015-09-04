@@ -5,10 +5,12 @@ var dynamicPageIndex = 0;
 var myapp = myapp || {};
 
 var policyScope = policyScope || {};
+
 policyScope.baseUrl = 'http://192.168.1.101:3010/api/';
 policyScope.baseUrl = 'http://104.236.242.105:3010/api/';
 
 policyScope.user = {};
+policyScope.currentPolicy={};
 
 var storage = new secStore
     , ssOptions = {
@@ -47,8 +49,11 @@ myapp.init = (function () {
 
 
         $$(document).on('deviceready', function(){
-            console.log('scanning');
+
         })
+
+        var signinController = new SignInPageController(fw7App, $$);
+        var acController = new apiCallController(fw7App, $$,signinController);
 
         // Callbacks to run specific code for specific pages, for example for About page:
         fw7App.onPageInit('about', function (page) {
@@ -76,7 +81,7 @@ myapp.init = (function () {
         });
 
         fw7App.onPageInit('step04', function (page) {
-            new myapp.pages.Step4PageController(fw7App, $$);
+            new myapp.pages.Step4PageController(fw7App, $$, signinController);
         });
 
         fw7App.onPageInit('step05', function (page) {
@@ -84,7 +89,7 @@ myapp.init = (function () {
         });
 
         fw7App.onPageInit('step06', function (page) {
-            new myapp.pages.Step6PageController(fw7App, $$);
+            new myapp.pages.Step6PageController(fw7App, $$,acController);
         });
 
         fw7App.onPageInit('step07', function (page) {
@@ -92,7 +97,15 @@ myapp.init = (function () {
         });
 
         fw7App.onPageInit('sign-in', function (page) {
-            new myapp.pages.SignInPageController(fw7App, $$);
+            new myapp.pages.SignInPageController(fw7App, $$,signinController);
+        });
+
+        fw7App.onPageInit('list-policies', function (page) {
+            new myapp.pages.ListPoliciesController(fw7App, $$,acController);
+        });
+
+        fw7App.onPageInit('list-baggages', function (page) {
+            new myapp.pages.ListBaggagesController(fw7App, $$,acController);
         });
 
         function createContentPage() {

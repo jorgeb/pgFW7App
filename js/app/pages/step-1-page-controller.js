@@ -10,11 +10,6 @@ myapp.pages.Step1PageController = function (myapp, $$) {
     // Init method
     (function () {
 
-        var user = {
-            username:'jboullosa@gmail.com',
-            password:'lul03'
-        };
-
         var errors = function(){
             var ret = [];
              if(policyScope.path["path[from]"] == policyScope.path["path[to]"])

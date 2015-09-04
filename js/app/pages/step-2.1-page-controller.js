@@ -18,7 +18,7 @@ myapp.pages.Step21PageController = function (myapp, $$) {
                 myapp.getCurrentView().router.loadPage('./view/step-02.html');
         });
 
-        $$('#step03bpath3[from]').text(policyScope.path['path[from]'] + ' ==> ' + policyScope.path['path[to]']);
+        $$('#step03bpath3[from]').text(policyScope.path['path[from]'] + ' / ' + policyScope.path['path[to]']);
 
         if(addDate)
             $$('#step03bfligth3[date]').text(policyScope.fligth['fligth[day]'] + ', ' + policyScope.fligth['fligth[hour]']);
@@ -39,7 +39,7 @@ myapp.pages.Step21PageController = function (myapp, $$) {
             if(addDate)
                 $$('#step03bfligth3[dateTo]').text(policyScope.fligth['fligth[returnday]'] + ', ' + policyScope.fligth['fligth[returnhour]']);
 
-            $$('#step03bpath3[to]').text(policyScope.path['path[to]'] + ' ==> ' + policyScope.path['path[from]']);
+            $$('#step03bpath3[to]').text(policyScope.path['path[to]'] + ' / ' + policyScope.path['path[from]']);
             $$('#step03bpath3[bagages]').text(policyScope.path['path[bagages]']*2);
             $$('#step03bpath3[paths]').text(2);
 

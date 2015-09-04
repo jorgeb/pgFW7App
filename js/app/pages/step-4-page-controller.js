@@ -2,11 +2,11 @@ var myapp = myapp || {};
 myapp.pages = myapp.pages || {};
 
 
-myapp.pages.Step4PageController = function (myapp, $$) {
+myapp.pages.Step4PageController = function (myapp, $$, signinController) {
     'use strict';
     // Init method
     (function () {
-
+/*
         $$('#lgisignin').off('click');
         $$('#lgisignin').click(function () {
             myapp.showPreloader();
@@ -43,26 +43,10 @@ myapp.pages.Step4PageController = function (myapp, $$) {
                 }
             });
         });
-
+*/
 
         $$('#to-step-5').click(function () {
-
-            storage.get(ssOptions, function(err, results){
-                if (err) throw err;
-
-                if (typeof results.user != 'undefined'){
-                    policyScope.user = JSON.parse( results.user);
-
-                    $$('#lgiusername').val(policyScope.user.username);
-
-                    myapp.loginScreen();
-                }
-                else {
-                    myapp.getCurrentView().router.loadPage('./view/sign-in.html');
-                    console.log('sigin');
-                }
-            });
-
+            signinController.Load('./view/step-05.html',false);
         });
 
     }());

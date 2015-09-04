@@ -2,7 +2,7 @@ var myapp = myapp || {};
 myapp.pages = myapp.pages || {};
 
 
-myapp.pages.Step6PageController = function (myapp, $$) {
+myapp.pages.Step6PageController = function (myapp, $$, acController) {
     'use strict';
     // Init method
     (function () {
@@ -50,27 +50,37 @@ myapp.pages.Step6PageController = function (myapp, $$) {
             else {
                 myapp.showPreloader();
 
+                acController.call('basic/policies','POST',{to:policyScope.path['path[to]'],
+                    from:policyScope.path['path[from]'],
+                    numbaggages:policyScope.path['path[bagages]'],
+                    roundtrip:policyScope.path['path[roundtrip]']}).then(function (data) {
 
-                $$.ajax ({
-                    url:  policyScope.baseUrl + 'email/invoice/'
+                    console.log(data);
+                    $$.ajax ({
+                        url:  policyScope.baseUrl + 'email/invoice/'
                         + policyScope.invoice['invoice[email]']
                         + '/' + policyScope.invoice['invoice[name]']
                         + '/2/yes',
-                    dataType: 'text',
-                    method:'GET',
-                    success: function(json, status, xhr) {
+                        dataType: 'text',
+                        method:'GET',
+                        success: function(json, status, xhr) {
 
-                        console.log('inside ' + status);
-                        myapp.hidePreloader();
-                        myapp.getCurrentView().router.loadPage('./view/step-07.html');
-                    },
+                            console.log('inside ' + status);
+                            myapp.hidePreloader();
+                            myapp.getCurrentView().router.loadPage('./view/thank-you.html');
+                        },
 
-                    error: function( jqXHR, status, error ) { // activated in iPad Safari as 200 ? w/o snd params
-                        console.log('error ' + jqXHR.statusText);
-                        myapp.hidePreloader();
-                        myapp.alert(jqXHR.statusText, 'Error en el envió de mail');
-                    }
+                        error: function( jqXHR, status, error ) { // activated in iPad Safari as 200 ? w/o snd params
+                            console.log('error ' + jqXHR.statusText);
+                            myapp.hidePreloader();
+                            myapp.alert(jqXHR.statusText, 'Error en el envió de mail');
+                        }
+                    });
+
+                }, function (reason) {
+                    console.log(reason);
                 });
+
 
             }
         });

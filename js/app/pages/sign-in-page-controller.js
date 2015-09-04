@@ -2,7 +2,7 @@ var myapp = myapp || {};
 myapp.pages = myapp.pages || {};
 
 
-myapp.pages.SignInPageController = function (myapp, $$) {
+myapp.pages.SignInPageController = function (myapp, $$,signinController) {
     'use strict';
     // Init method
     (function () {
@@ -14,6 +14,10 @@ myapp.pages.SignInPageController = function (myapp, $$) {
 
             return ret;
         }
+
+        $$('#s-sigin').click(function () {
+            signinController.Load('./view/step-05.html',true);
+        });
 
         $$('#new-sigin').click(function () {
 
@@ -56,9 +60,12 @@ myapp.pages.SignInPageController = function (myapp, $$) {
                     data:user,
                     success: function(json, status, xhr) {
                         policyScope.DBuser =  JSON.parse(json);
+                        policyScope.DBuser.pass = user.password;
+
                         ssOptions.data['user'] = json;
                         storage.set(ssOptions, function(err, results){
                             if (err) throw err;
+                            policyScope.user = JSON.parse(results.user);
                         });
 
                         myapp.hidePreloader();

@@ -37,21 +37,25 @@
 .flaticon-heart56:before {
     content: "\e007";
 }
-.flaticon-luggage26:before {
+.flaticon-identification4:before {
     content: "\e008";
 }
-.flaticon-money191:before {
+.flaticon-luggage26:before {
     content: "\e009";
 }
-.flaticon-person279:before {
+.flaticon-money191:before {
     content: "\e00a";
 }
-.flaticon-suitcases6:before {
+.flaticon-person279:before {
     content: "\e00b";
 }
-.flaticon-travel25:before {
+.flaticon-suitcases6:before {
     content: "\e00c";
 }
+.flaticon-travel25:before {
+    content: "\e00d";
+}
+
 
 .flaticon-rounded {
     width: 35px;
@@ -70,10 +74,6 @@
     background-color: #ff2d55;
     color: #fff;
 }
-.flaticon-rounded-green{
-    background-color: #4cd964;
-    color: #fff;
-}
 
 .flaticon-rounded-lightblue{
     background-color: #5ac8fa;
@@ -82,6 +82,17 @@
 
 .flaticon-rounded-gray{
     background-color: #8e8e93;
+    color: #fff;
+    font-size: 26px;
+}
+
+.flaticon-rounded-green{
+    background-color: #4cd964;
+    color: #fff;
+}
+
+.flaticon-rounded-blue{
+    background-color: #007aff;
     color: #fff;
     font-size: 26px;
 }

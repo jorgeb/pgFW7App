@@ -104,28 +104,28 @@ myapp.pages.IndexPageController = function (myapp, $$) {
             {
                 id: 'slide0',
                 picture: '<div class="tutorialicon flaticon-person279"></div>',
-                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p>BIENVENIDO A LA APP<br/>SERVICIOS DISPONIBLES<br/><ul><li>A.- VIAJERO</li><li>B. - EXTRAVIO EQUIPAJE</li><li>C.- CANCELACION VUELO</li><li>D.- DEMORA VUELO</li></ul>'
+                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p><br/>BIENVENIDO A LA APP<br/>SERVICIOS DISPONIBLES<br/><ul><li>A.- VIAJERO</li><li>B. - EXTRAVIO EQUIPAJE</li><li>C.- CANCELACION VUELO</li><li>D.- DEMORA VUELO</li></ul>'
 
             },
             {
                 id: 'slide1',
                 picture: '<div class="tutorialicon flaticon-dog73"></div>',
-                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p>SEGUROS DE VIAJERO<br/><ul><li>Seguro Vida</li><li>Seguro Autos</li><li>Seguro Accidentes</li><li>Seguros M&eacute;dicos</li><li>Seguros Educacionales</li></ul>'
+                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p><br/>SEGUROS DE VIAJERO<br/><ul><li>Seguro Vida</li><li>Seguro Autos</li><li>Seguro Accidentes</li><li>Seguros M&eacute;dicos</li><li>Seguros Educacionales</li></ul>'
             },
             {
                 id: 'slide2',
                 picture: '<div class="tutorialicon flaticon-baggage20"></div>',
-                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p>SEGUROS PROTECCION EQUIPAJE<br/><ul><li>Seguro Equipaje</li><li>Seguro Hoteles</li><li>Seguro Alquiler autos</li><li>Seguros Cruceros</li></ul>'
+                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p><br/>SEGUROS PROTECCION EQUIPAJE<br/><ul><li>Seguro Equipaje</li><li>Seguro Hoteles</li><li>Seguro Alquiler autos</li><li>Seguros Cruceros</li></ul>'
             },
             {
                 id: 'slide3',
                 picture: '<div class="tutorialicon flaticon-bag30"></div>',
-                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p>SEGUROS CANCELACION VUELO<br/><ul><li>Seguro Viaje</li><li>Seguro Reservaciones</li><li>Seguro Hoteles</li><li>Seguros Traslados</li></ul>'
+                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p><br/>SEGUROS CANCELACION VUELO<br/><ul><li>Seguro Viaje</li><li>Seguro Reservaciones</li><li>Seguro Hoteles</li><li>Seguros Traslados</li></ul>'
             },
             {
                 id: 'slide4',
                 picture: '<div class="tutorialicon flaticon-suitcases6"></div>',
-                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p>SEGUROS DEMORA VUELO<br/><ul><li>Seguro Hospedaje</li><li>Seguro Protecci&oacute;n Vuelo</li><li>Seguros M&eacute;dicos</li><li>Seguros Traslados</li></ul><a class="tutorial-close-btn" href="#">Fin Tutorial</a>'
+                text: '<p class="app-name">Tripper</p><p class="app-name">Lock</p><br/>SEGUROS DEMORA VUELO<br/><ul><li>Seguro Hospedaje</li><li>Seguro Protecci&oacute;n Vuelo</li><li>Seguros M&eacute;dicos</li><li>Seguros Traslados</li></ul><a class="tutorial-close-btn" href="#">Fin Tutorial</a>'
             }
 
         ];
