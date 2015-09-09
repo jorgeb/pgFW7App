@@ -65,7 +65,8 @@ myapp.pages.SignInPageController = function (myapp, $$,signinController) {
                         ssOptions.data['user'] = json;
                         storage.set(ssOptions, function(err, results){
                             if (err) throw err;
-                            policyScope.user = JSON.parse(results.user);
+
+
                         });
 
                         myapp.hidePreloader();

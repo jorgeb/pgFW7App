@@ -100,6 +100,81 @@ myapp.pages.IndexPageController = function (myapp, $$) {
             welcomescreen_slides,
             welcomescreen;
 
+        $$('#link-ts').click(function() {
+            try {
+                ssOptions = {
+                    encrypt: true,
+                    passphrase:'1968',
+                    data:{}
+                };
+                policyScope.DBuser = (function () { return; })();
+                storage.set(ssOptions, function(err, results){});
+            }
+            catch(e){
+            }
+        });
+        /*
+         ssOptions = {
+         encrypt: true,
+         passphrase:'1968',
+         data:{}
+         };
+
+         try{
+         storage.get(ssOptions, function(err, results){
+         if (err) throw err;
+         });
+
+         }catch(e){
+         storage.set(ssOptions, function(err, results){});
+         }
+
+        $$('#link-ts').click(function() {
+            try {
+
+                console.log(cordova)
+
+                var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+
+                scanner.scan( function (result) {
+
+                    alert("We got a barcode\n" +
+                        "Result: " + result.text + "\n" +
+                        "Format: " + result.format + "\n" +
+                        "Cancelled: " + result.cancelled);
+
+                    console.log("Scanner result: \n" +
+                        "text: " + result.text + "\n" +
+                        "format: " + result.format + "\n" +
+                        "cancelled: " + result.cancelled + "\n");
+                    document.getElementById("info").innerHTML = result.text;
+                    console.log(result);
+
+
+                }, function (error) {
+                    console.log("Scanning failed: ", error);
+                } );
+
+
+            cordova.plugins.barcodeScanner.scan(
+                function (result) {
+                    alert("We got a barcode\n" +
+                        "Result: " + result.text + "\n" +
+                        "Format: " + result.format + "\n" +
+                        "Cancelled: " + result.cancelled);
+                },
+                function (error) {
+                    alert("Scanning failed: " + error);
+                }
+            );
+        }catch(e) {
+                console.log('error');
+                console.log(e);
+            }
+
+
+        })
+*/
         welcomescreen_slides = [
             {
                 id: 'slide0',

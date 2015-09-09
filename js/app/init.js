@@ -9,6 +9,7 @@ var policyScope = policyScope || {};
 policyScope.baseUrl = 'http://192.168.1.101:3010/api/';
 policyScope.baseUrl = 'http://104.236.242.105:3010/api/';
 
+
 policyScope.user = {};
 policyScope.currentPolicy={};
 

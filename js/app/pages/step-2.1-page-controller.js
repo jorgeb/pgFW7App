@@ -8,8 +8,6 @@ myapp.pages.Step21PageController = function (myapp, $$) {
     (function () {
         var addDate = typeof(policyScope.previous) && policyScope.previous != 'step-1';
 
-        console.log($$('#step03bpath3[from]').length)
-
         $$('#step03bto-step-4').click(function () {
             policyScope.previous = null;
             if(addDate)
